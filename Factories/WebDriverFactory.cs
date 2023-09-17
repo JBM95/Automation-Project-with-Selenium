@@ -2,6 +2,7 @@
 using Automation.Library.Models.Settings;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 
 namespace Automation.Library.Factories
 {
@@ -19,8 +20,9 @@ namespace Automation.Library.Factories
             return webDriverSettings.Browser switch
             {
                 "Chrome" => GetChromeWebDriver(webDriverSettings),
+                "Edge" => GetEdgeWebDriver(webDriverSettings),
                 _ => throw new System.NotSupportedException($"Specified webdriver browser setting is not supported in this project: {webDriverSettings.Browser}.")
-            };
+            } ;
         }
 
         protected IWebDriver GetChromeWebDriver(WebDriverSettings webDriverSettings)
@@ -34,5 +36,18 @@ namespace Automation.Library.Factories
 
             return new ChromeDriver(chromeOptions);
         }
+
+        protected IWebDriver GetEdgeWebDriver(WebDriverSettings webDriverSettings)
+        {
+            var edgeOptions = new EdgeOptions();
+
+            edgeOptions.AddArgument("start-maximized");
+
+
+            // You can add more Edge-specific options here as needed.
+
+            return new EdgeDriver(edgeOptions);
+        }
+
     }
 }

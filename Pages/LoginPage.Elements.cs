@@ -1,23 +1,22 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Automation.Library.Pages
 {
     public partial class LoginPage
     {
-        public ISearchContext SearchContext;
+        private readonly ISearchContext _searchContext;
 
-        public IWebElement LogInButton => SearchContext.FindElement(By.Id("login-button"));
+        public LoginPage(ISearchContext searchContext)
+        {
+            _searchContext = searchContext;
+        }
 
-        public IWebElement UsernameInput => SearchContext.FindElement(By.Id("user-name"));
+        public IWebElement LogInButton => _searchContext.FindElement(By.Id("login-button"));
 
-        public IWebElement PasswordInput => SearchContext.FindElement(By.Id("password"));
+        public IWebElement UsernameInput => _searchContext.FindElement(By.Id("user-name"));
 
+        public IWebElement PasswordInput => _searchContext.FindElement(By.Id("password"));
 
-
+        // Other methods and properties related to the LoginPage
     }
 }
