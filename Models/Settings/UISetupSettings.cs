@@ -2,7 +2,7 @@
 
 namespace Automation.Library.Models.Settings
 {
-    public class SetupSettings
+    public class UISetupSettings
     {
         public String URL { get; set; }
 

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Automation.Library.Pages
+namespace Automation.Library.Models.Settings
 {
-    public partial class Main
+    public class APISetupSettings
     {
-
-
+        public String URL { get; set; }
     }
 }
