@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Automation.Library.Pages
 {
-  public partial class Main 
+    public partial class MainPage
     {
-    
-    
-    
-    
+
+
     }
 }
