@@ -9,5 +9,9 @@ namespace Automation.Library.Models.Settings
     public class APISetupSettings
     {
         public String URL { get; set; }
+
+        public String BaseURL { get; set; }
+
+        public String APIKey { get; set; }
     }
 }
