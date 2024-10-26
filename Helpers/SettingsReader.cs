@@ -1,7 +1,4 @@
-﻿using Automation.Library.Models.Settings;
-using Microsoft.Extensions.Configuration;
-using OpenQA.Selenium.DevTools;
-using System;
+﻿using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
